@@ -62,7 +62,7 @@ move p1 p2 [xs,ys,zs] = map obj [0, 1, 2]
       | i == p2   = newTw2
       | otherwise = newTw3
 
--- Sorting towers according to a non-standard ordering
+-- Sorting towers according to a non-standard ordering (zero is infinity)
 
 sortTws :: [[Int]] -> [Int]
 sortTws [xs, ys, zs] = map fst $ sortBy orderBySnd $ [(0,h1),(1,h2),(2,h3)]
